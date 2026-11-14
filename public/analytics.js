@@ -24,7 +24,17 @@
     consent = value;
     try { localStorage.setItem(key, JSON.stringify({ value, expires: Date.now() + lifetime })); } catch { /* In-memory choice for this page. */ }
   };
-  const cleanUrl = value => { try { const url = new URL(value); return url.origin + url.pathname; } catch { return ''; } };
+  const cleanUrl = value => {
+    try {
+      const url = new URL(value);
+      const clean = new URL(url.origin + url.pathname);
+      for (const name of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'yclid', 'gclid']) {
+        const parameter = url.searchParams.get(name);
+        if (parameter) clean.searchParams.set(name, parameter);
+      }
+      return clean.href;
+    } catch { return ''; }
+  };
   const goal = (name, once = false) => {
     if (!active || consent !== 'accepted' || (once && sent.has(name))) return;
     window.ym(id, 'reachGoal', name);

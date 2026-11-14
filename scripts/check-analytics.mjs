@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 
 const code = await readFile('public/analytics.js', 'utf8');
 const key = 'pushii-analytics-consent-v1';
-function scenario(saved, { blocked = false, origin = 'https://mypushii.ru' } = {}) {
+function scenario(saved, { blocked = false, origin = 'https://mypushii.ru', query = '?private=value' } = {}) {
   const nodes = new Map();
   const requests = [], calls = [], cookies = [];
   const docListeners = {}, windowListeners = {};
@@ -36,7 +36,7 @@ function scenario(saved, { blocked = false, origin = 'https://mypushii.ru' } = {
     removeItem: name => store.delete(name), key: i => [...store.keys()][i], get length() { return store.size; },
   };
   const window = { addEventListener: (name, fn) => { windowListeners[name] = fn; }, innerHeight: 800, scrollY: 1000 };
-  runInNewContext(code, { document, window, localStorage, location: { origin, hostname: 'mypushii.ru', href: origin + '/?private=value' }, Element, HTMLDetailsElement, URL });
+  runInNewContext(code, { document, window, localStorage, location: { origin, hostname: 'mypushii.ru', href: origin + '/' + query }, Element, HTMLDetailsElement, URL });
   return {
     requests, calls, cookies, store, nodes,
     click: id => node(id).handlers.click(),
@@ -76,4 +76,6 @@ s.storage(valid('rejected')); assert.equal(s.calls.at(-1)[1], 'destruct');
 assert.equal(scenario({ value: 'accepted', expires: 1 }).requests.length, 0, 'Expired consent does not start tracking');
 s = scenario(null, { blocked: true }); s.click('analytics-accept'); s.loaded(); s.click('analytics-reject'); assert.equal(s.calls.at(-1)[1], 'destruct');
 s = scenario(valid('accepted'), { origin: 'http://127.0.0.1:3001' }); assert.equal(s.requests.length, 0, 'Preview does not pollute production analytics');
+s = scenario(valid('accepted'), { query: '?utm_source=partner&utm_medium=referral&utm_campaign=launch&yclid=123&private=secret#fragment' }); s.loaded();
+assert.equal(s.calls[0][2].url, 'https://mypushii.ru/?utm_source=partner&utm_medium=referral&utm_campaign=launch&yclid=123', 'Campaign attribution is preserved without arbitrary parameters or fragments');
 console.log('PASS: consent, rejection, persistence, expiration, blocked storage, withdrawal race, cross-tab withdrawal, goals and preview isolation.');
