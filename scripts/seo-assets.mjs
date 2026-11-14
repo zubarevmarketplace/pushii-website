@@ -3,7 +3,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 
 // Derive sizes from the approved brand asset; no new artwork.
 const paw = await readFile('public/icon.svg');
-const png = size => sharp(paw).resize(size, size, { fit: 'contain', background: '#fff8f0' }).png().toBuffer();
+const png = size => sharp(paw).resize(size, size, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
 for (const size of [48, 192, 512]) await writeFile(`public/favicon-${size}.png`, await png(size));
 const frames = await Promise.all([16, 32, 48].map(png));
 const header = Buffer.alloc(6 + frames.length * 16);

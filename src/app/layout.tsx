@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   },
   twitter: { card: 'summary_large_image', title: site.title, description: site.description, images: ['/brand/og.jpg'] },
   icons: { icon: [
-    { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
-    { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
-    { url: '/icon.svg', sizes: 'any', type: 'image/svg+xml' },
+    { url: '/favicon.ico?v=2', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+    { url: '/favicon-48.png?v=2', sizes: '48x48', type: 'image/png' },
+    { url: '/icon.svg?v=2', sizes: 'any', type: 'image/svg+xml' },
   ], apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }] },
   manifest: '/site.webmanifest',
   verification: { google: site.googleVerification || undefined, yandex: site.yandexVerification || undefined },
