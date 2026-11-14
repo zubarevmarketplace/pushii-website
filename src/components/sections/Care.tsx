@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from '../ui/ResponsiveImage';
 import { careDirections } from '@/data/products';
 import styles from './Landing.module.css';
 

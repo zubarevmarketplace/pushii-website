@@ -70,3 +70,9 @@ if (site.mode === 'production') {
   }
 }
 console.log('PASS: social cards, structured data, icons, privacy, consent boundary, sitemap targets and 404 metadata.');
+
+const variants = JSON.parse(await readFile('src/config/image-variants.json', 'utf8'));
+for (const images of Object.values(variants)) for (const image of images) await access(resolve('out', '.' + image.src));
+assert.ok(html.includes('fetchPriority="high"') || html.includes('fetchpriority="high"'), 'Hero has high fetch priority');
+assert.ok(html.includes('/visuals/responsive/hero-shampoos-v3-768.webp 768w'), 'Responsive hero is present');
+console.log('PASS: responsive image sources and hero priority.');

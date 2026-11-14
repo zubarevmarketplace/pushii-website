@@ -1,0 +1,78 @@
+{
+  "/visuals/hero-shampoos-v3.webp": [
+    {
+      "src": "/visuals/responsive/hero-shampoos-v3-320.webp",
+      "width": 320
+    },
+    {
+      "src": "/visuals/responsive/hero-shampoos-v3-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/visuals/responsive/hero-shampoos-v3-768.webp",
+      "width": 768
+    },
+    {
+      "src": "/visuals/responsive/hero-shampoos-v3-1024.webp",
+      "width": 1024
+    },
+    {
+      "src": "/visuals/hero-shampoos-v3.webp",
+      "width": 1254
+    }
+  ],
+  "/visuals/cat-v2.webp": [
+    {
+      "src": "/visuals/responsive/cat-v2-320.webp",
+      "width": 320
+    },
+    {
+      "src": "/visuals/responsive/cat-v2-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/visuals/responsive/cat-v2-768.webp",
+      "width": 768
+    },
+    {
+      "src": "/visuals/cat-v2.webp",
+      "width": 900
+    }
+  ],
+  "/visuals/dog-v2.webp": [
+    {
+      "src": "/visuals/responsive/dog-v2-320.webp",
+      "width": 320
+    },
+    {
+      "src": "/visuals/responsive/dog-v2-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/visuals/responsive/dog-v2-768.webp",
+      "width": 768
+    },
+    {
+      "src": "/visuals/dog-v2.webp",
+      "width": 900
+    }
+  ],
+  "/visuals/shampoo-duo-v3.webp": [
+    {
+      "src": "/visuals/responsive/shampoo-duo-v3-320.webp",
+      "width": 320
+    },
+    {
+      "src": "/visuals/responsive/shampoo-duo-v3-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/visuals/responsive/shampoo-duo-v3-768.webp",
+      "width": 768
+    },
+    {
+      "src": "/visuals/shampoo-duo-v3.webp",
+      "width": 1000
+    }
+  ]
+}
