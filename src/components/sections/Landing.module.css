@@ -1,0 +1,119 @@
+.hero { position: relative; isolation: isolate; overflow: hidden; background: radial-gradient(ellipse at 80% 80%,#f3dff5 0,transparent 50%),var(--paper); }
+.hero::after { content: ''; position: absolute; z-index: -1; right: -160px; bottom: -45px; width: 470px; height: 275px; border-radius: 60% 40% 35% 65%; background: linear-gradient(135deg,#eef8a7,#d3e86b); transform: rotate(-19deg); box-shadow: inset 6px 8px 12px #f7ffd580; }
+.heroInner { display: grid; grid-template-columns: .86fr 1.14fr; min-height: 760px; position: relative; }
+.heroCopy { position: relative; z-index: 3; padding: 36px 0 140px; }
+.intro { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 800; margin-bottom: 22px; color: #764d86; }
+.intro svg { width: 20px; height: 20px; }
+.heroCopy h1 { position: relative; display: inline-block; font-size: clamp(76px,7.3vw,104px); font-weight: 1000; letter-spacing: -.055em; line-height: .94; transform: rotate(-2deg); }
+.heroSubtitle { margin-top: 30px; font-size: 25px; font-weight: 800; letter-spacing: -.02em; line-height: 1.25; }
+.heroDescription { font-size: 16px; color: var(--muted); line-height: 1.55; margin-top: 17px; }
+.actions { display: flex; align-items: center; gap: 24px; margin-top: 28px; }
+.actions :global(.button) { text-align: left; }
+.actions :global(.button) svg { width: 26px; height: 26px; }
+.lilacBackdrop { position: absolute; width: 850px; height: 590px; right: -280px; top: -100px; border-radius: 34% 47% 42% 60%; background: linear-gradient(135deg,#f2dffa,#e3c4f1); transform: rotate(-17deg); z-index: -1; box-shadow: inset 10px 6px 25px #fcf4ff80; }
+.heroArt { position: relative; min-width: 0; }
+.heroPets { position: absolute; width: 730px; max-width: none; right: -50px; bottom: 24px; filter: drop-shadow(0 14px 14px #773c8120); }
+.sunRays { position: absolute; width: 50px; height: 65px; right: -52px; top: -9px; transform: rotate(8deg); }
+.sunRays i { position: absolute; width: 9px; height: 28px; background: var(--yellow); border-radius: 20px; transform: rotate(-30deg); left: 9px; }
+.sunRays i:nth-child(2) { transform: rotate(-60deg); top: 22px; left: 24px; }
+.sunRays i:nth-child(3) { transform: rotate(-80deg); top: 43px; left: 23px; height: 19px; }
+.artSpark { position: absolute; right: -10px; top: 80px; font-size: 65px; color: #7f439c; transform: rotate(15deg); }
+.careSeal { position: absolute; right: -12px; bottom: 142px; display: flex; justify-content: center; align-items: center; flex-direction: column; width: 105px; height: 105px; background: linear-gradient(140deg,#fffef7,#fff0a7); border: 4px solid #fffbf5; border-radius: 50%; gap: 5px; text-align: center; line-height: 1.1; font-weight: 800; font-size: 12px; transform: rotate(12deg); box-shadow: 0 10px 24px #4a1c5a15; }
+.careSeal svg { width: 25px; height: 25px; }
+.heroWave { position: absolute; width: 100%; height: 125px; bottom: -1px; z-index: 4; pointer-events: none; }
+.petWorld { position: relative; z-index: 5; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: -4px; }
+.petTile { position: relative; display: flex; align-items: center; min-height: 245px; border-radius: 38px; text-decoration: none; overflow: hidden; box-shadow: inset 0 3px 6px #ffffffc0,0 12px 22px #58306b06; }
+.dogTile { background: linear-gradient(120deg,#d6eaff,#c0def8 65%,#e4effb); }
+.catTile { background: linear-gradient(120deg,#ecd8fb,#e2c6f3 70%,#f2dffa); }
+.petTile > div { position: relative; z-index: 2; width: 57%; padding: 29px 34px; }
+.tileEyebrow { display: block; font-size: 12px; color: #654375; margin-bottom: 7px; font-weight: 700; }
+.petTile h2 { font-size: 36px; white-space: nowrap; }
+.tileLink { display: inline-flex; align-items: center; gap: 15px; font-size: 13px; font-weight: 800; margin-top: 25px; min-height: 32px; }
+.petTile > img { position: absolute; bottom: -24px; right: -5px; width: 380px; max-width: none; height: 270px; object-fit: contain; transition: transform .3s; }
+.catTile > img { right: -10px; bottom: -18px; }
+.petTile:hover > img { transform: scale(1.035) rotate(-2deg); }
+.principles { padding: 78px 0 50px; text-align: center; }
+.principles > h2 { font-size: 49px; margin-bottom: 43px; }
+.principleGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 56px; }
+.principleGrid > div { position: relative; }
+.principleGrid > div+div::before { content: ''; position: absolute; top: 35px; left: -28px; height: 90px; width: 1px; background: var(--line); }
+.principleIcon { width: 88px; height: 70px; margin: 0 auto 18px; display: flex; justify-content: center; align-items: center; font-size: 41px; font-weight: 600; border-radius: 55% 45% 54% 46%; background: linear-gradient(140deg,#fff49c,#ffe268); box-shadow: inset 0 3px 4px #fff9d5,0 6px 12px #e7bf4c13; transform: rotate(-9deg); }
+.principleGrid > div:nth-child(2) .principleIcon { background: linear-gradient(135deg,#f5e4ff,#dfbaf5); box-shadow: inset 0 3px 4px #fff3ff; transform: rotate(7deg); }
+.principleGrid > div:nth-child(3) .principleIcon { background: linear-gradient(135deg,#f2ffbe,#d9eb8e); box-shadow: inset 0 3px 4px #fbffd6; transform: rotate(-5deg); }
+.principles h3 { font-size: 23px; margin-bottom: 10px; }
+.principles p { font-size: 15px; color: var(--muted); max-width: 310px; margin: auto; }
+.sectionHeading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 45px; }
+.sectionHeading > p { max-width: 340px; color: var(--muted); }
+.care { padding-top: 64px; }
+.product { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center; }
+.productFigure { position: relative; background: radial-gradient(ellipse at 45% 10%,#f9f3ff,#eadbf4 66%,#e0c8ef); border-radius: 46px; min-width: 0; padding: 35px 24px 28px; box-shadow: inset 0 3px 6px #fff9ff; overflow: hidden; }
+.productFigure::before { content: ''; position: absolute; bottom: 75px; left: 8%; width: 84%; height: 95px; border-radius: 50%; background: linear-gradient(#f9efff,#d7b4ea); box-shadow: 0 20px 18px #8b5da438,inset 0 4px 7px #fff; }
+.labelPair { height: 393px; display: flex; justify-content: center; align-items: center; padding-left: 6px; position: relative; }
+.labelArt { position: relative; width: 185px; height: 336px; background: #fafaf6; color: #242124; padding: 23px 16px; box-shadow: 8px 19px 24px #452c6428; transform: rotate(9deg) translateY(5px); border-radius: 4px; overflow: hidden; flex-shrink: 0; }
+.labelArt > img:first-child { width: 144px; height: auto; }
+.labelTitle { display: block; font-size: 22px; font-weight: 900; margin-top: 14px; line-height: 1.2; }
+.labelSubtitle { display: block; font-size: 10px; color: #236c43; font-weight: 700; margin-top: 4px; }
+.labelArt > img:last-child { position: absolute; right: -11px; bottom: -8px; width: 160px; height: 211px; object-fit: contain; }
+.labelWave { position: absolute; bottom: -55px; left: -25px; width: 270px; height: 120px; border-radius: 50%; background: var(--green); }
+.darkLabel { background: #211e20; color: var(--cream); transform: rotate(-11deg) translate(13px,-10px); }
+.darkLabel .labelSubtitle { color: var(--pink); }.darkLabel .labelWave { background: var(--pink); }
+.productFigure figcaption { position: relative; text-align: center; font-size: 12px; color: #66506e; line-height: 1.5; margin-top: 16px; }
+.badge { display: inline-block; padding: 7px 15px; background: #edf2cc; color: #4c5721; border-radius: 100px; font-weight: 800; font-size: 12px; }
+.productPurpose { font-size: 15px; color: var(--muted); margin-top: 25px; margin-bottom: 10px; }
+.productCopy h3 { font-size: 39px; max-width: 400px; }.productCopy > p:not([class]) { margin: 20px 0 26px; color: var(--muted); max-width: 450px; }
+.productDetails { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.productDetails summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; min-height: 67px; font-weight: 800; font-size: 15px; list-style: none; }
+.productDetails summary::-webkit-details-marker { display: none; }.productDetails summary span { font-size: 26px; font-weight: 400; }.productDetails[open] summary span { transform: rotate(45deg); }.productDetails > div { padding-bottom: 22px; }.productDetails h4 { margin-top: 15px; font-size: 16px; }.productDetails p { margin-top: 5px; font-size: 15px; color: var(--muted); }.smallNote { font-size: 13px; color: var(--muted); margin-top: 22px; }
+.about { position: relative; background: linear-gradient(#dfc4f2,#f0e1f7); margin-top: 70px; }
+.aboutWave { position: absolute; width: 100%; height: 130px; top: -129px; pointer-events: none; }
+.aboutInner { display: grid; grid-template-columns: 1fr 1fr; gap: 110px; padding: 48px 0 95px; }
+.aboutHeading h2 { max-width: 460px; }.aboutNote { display: flex; align-items: center; gap: 16px; margin-top: 50px; font-size: 15px; line-height: 1.4; }.aboutNote svg { width: 55px; height: 55px; background: var(--yellow); border-radius: 50%; padding: 9px; transform: rotate(-14deg); }
+.story { padding-top: 8px; }.story p { margin-bottom: 22px; }.story .storyLead { font-size: 25px; line-height: 1.5; font-weight: 800; letter-spacing: -.02em; margin-bottom: 26px; }.story .storyConclusion { font-weight: 800; margin: 28px 0 0; }
+.production { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }.productionCopy { min-width: 0; }.productionCopy > p:not([class]) { max-width: 480px; margin-top: 25px; color: var(--muted); }.productionCopy > a { margin-top: 22px; }
+.productionPanel { position: relative; background: radial-gradient(ellipse at 30% 0,#f5edff,#ddc4f0 65%,#c2a2d7); color: var(--ink); padding: 50px 42px 35px; min-height: 476px; border-radius: 46% 46% 35% 15%; display: flex; align-items: center; flex-direction: column; text-align: center; box-shadow: inset 8px 10px 25px #ffffffaa,12px 23px 45px #ad85bf24; transform: rotate(3deg); }
+.productionPanel > * { transform: rotate(-3deg); }.productionPanel > p:first-child { font-size: 17px; margin-top: 8px; }.year { color: var(--ink); font-size: clamp(82px,8vw,116px); line-height: 1.2; font-weight: 1000; letter-spacing: -.06em; margin-top: 18px; text-shadow: 0 3px 0 #f2e2ff; }.year span { font-size: 26px; font-weight: 600; }.yearCaption { font-size: 16px; line-height: 1.5; }.productionSteps { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px; margin: 33px 0 25px; }.productionSteps span { border: 1px solid #a488b3; border-radius: 50px; padding: 7px 12px; font-size: 12px; }.productionPanel small { font-size: 11px; color: #634b6d; margin-top: auto; }
+.questions { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; border-top: 1px solid var(--line); }.faqIntro { color: var(--muted); margin-top: 25px; }.faqList details { border-bottom: 1px solid var(--line); }.faqList details:first-child { border-top: 1px solid var(--line); }.faqList summary { min-height: 83px; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-weight: 800; font-size: 18px; cursor: pointer; list-style: none; padding-block: 18px; }.faqList summary::-webkit-details-marker { display: none; }.faqList summary span { display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 24px; font-weight: 500; width: 35px; height: 35px; border-radius: 50%; background: #eee0f6; }.faqList details[open] summary span { transform: rotate(45deg); }.faqList details p { padding: 0 30px 25px 0; color: var(--muted); font-size: 16px; }
+.contact { position: relative; background: linear-gradient(#dec3f1,#ead5f8); margin-top: 80px; }.contactWave { position: absolute; top: -129px; width: 100%; height: 130px; pointer-events: none; }.contactInner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 45px; position: relative; overflow: hidden; }.contactCopy { padding: 42px 0 70px; position: relative; z-index: 2; }.contactCopy :global(.eyebrow) { color: #694278; }.contactCopy h2 { max-width: 580px; }.contactCopy > p:not([class]) { max-width: 440px; margin: 22px 0 28px; }.contactCopy .telegramNote { font-size: 12px; color: #674f71; margin-top: 12px; }.contactArt { position: relative; min-height: 400px; align-self: stretch; }.contactArt > span { position: absolute; left: -7px; top: 24px; background: var(--yellow); border-radius: 48% 52% 45% 55%; padding: 16px 25px; font-size: 17px; font-weight: 800; transform: rotate(8deg); z-index: 3; box-shadow: inset 0 3px 4px #fff2b3; }.contactArt img { position: absolute; bottom: -42px; right: -80px; width: 620px; max-width: none; }
+.bottleFigure { padding: 20px 28px 32px; background: radial-gradient(ellipse at 50% 20%,#fff9cf,#eaf2ba 70%,#dce995); }
+.bottleFigure::before { bottom: 25px; background: linear-gradient(#f4edff,#d3b2e5); }
+.bottleDuo { position: relative; width: 100%; height: auto; filter: drop-shadow(0 10px 10px #6d4a7520); }
+.productionMotto { font-weight: 1000; font-size: clamp(42px,4.7vw,66px); line-height: 1.02; letter-spacing: -.04em; margin: 28px 0 22px; text-shadow: 0 3px 0 #f2e2ff; }
+.brandSculpture { position: relative; align-self: center; height: 390px; max-width: 460px; width: 100%; min-width: 0; }
+.contactCopy { min-width: 0; }
+.sculptureBase { position: absolute; width: 95%; height: 115px; left: 2%; bottom: 28px; border-radius: 48% 48% 36% 38%; transform: rotate(-7deg); background: linear-gradient(165deg,#f6ffd1 5%,#d9eb87 55%,#b6ca5b); box-shadow: inset 0 8px 10px #f9ffe5,0 20px 25px #77518325; }
+.sculpturePaw { position: absolute; width: 215px; height: 220px; right: 24px; top: 42px; display: grid; place-items: center; border-radius: 44% 53% 43% 52%; background: radial-gradient(ellipse at 30% 18%,#fff5ac,#ffe45f 62%,#eac43d); box-shadow: inset 5px 6px 12px #ffffdf,8px 14px 20px #8a5f5233; transform: rotate(12deg); color: var(--ink); }
+.sculpturePaw svg { width: 115px; height: 115px; filter: drop-shadow(0 3px 0 #fff3af); }
+.sculptureHeart { position: absolute; top: 120px; left: 10px; font-size: 110px; font-weight: 900; width: 155px; height: 155px; display: flex; align-items: center; justify-content: center; line-height: 1; border-radius: 45% 50% 40% 50%; background: linear-gradient(145deg,#ffe9f2,#f4b2d4); box-shadow: inset 4px 5px 8px #fff7fb,0 14px 20px #77437424; transform: rotate(-13deg); z-index: 1; }
+.brandSculpture p { position: absolute; bottom: 45px; left: 0; width: 100%; text-align: center; font-size: 17px; font-weight: 800; line-height: 1.35; transform: rotate(-7deg); }
+@media(max-width:1023px) { .brandSculpture { transform: scale(.8); transform-origin: center; }.sculpturePaw { right: -15px; }.sculptureHeart { left: -20px; }.brandSculpture p { font-size: 15px; }.productionMotto { font-size: 46px; } }
+@media(max-width:767px) { .hero::after { width: 300px; height: 190px; right: -180px; bottom: -10px; }.brandSculpture { width: 330px; max-width: 100%; margin: 0 auto; height: 355px; transform: scale(.9); }.sculpturePaw { right: 8px; width: 190px; height: 195px; }.sculptureHeart { left: 0; top: 115px; width: 135px; height: 135px; font-size: 95px; }.bottleFigure { padding: 18px; } }
+@media(max-width:1199px) {
+ .heroInner { min-height: 675px; }.heroCopy h1 { font-size: 86px; }.heroSubtitle { font-size: 22px; }.heroPets { width: 630px; right: -25px; bottom: 24px; }.artSpark { right: -22px; }.careSeal { right: -20px; bottom: 120px; }
+ .petTile { min-height: 220px; }.petTile > div { padding-left: 28px; }.petTile h2 { font-size: 31px; }.petTile > img { width: 325px; height: 240px; right: -10px; }.catTile > img { right: -10px; }.tileEyebrow { font-size: 11px; }
+ .product { gap: 48px; }.labelArt { width: 165px; height: 315px; }.aboutInner,.production { gap: 65px; }.questions { gap: 50px; }.productionPanel { padding-inline: 25px; }.contactArt img { right: -95px; width: 550px; }
+}
+@media(max-width:1023px) {
+ .heroInner { grid-template-columns: .95fr 1.05fr; min-height: 630px; }.heroCopy { padding-top: 28px; padding-bottom: 110px; }.heroCopy h1 { font-size: 74px; }.heroSubtitle { font-size: 20px; }.heroDescription { font-size: 14px; }.heroPets { width: 500px; right: -35px; bottom: 40px; }.heroWave { height: 95px; }.intro { font-size: 12px; }.sunRays { right: -35px; transform: scale(.7); }.artSpark { top: 60px; font-size: 45px; }.careSeal { display: none; }.actions { gap: 18px; }.actions :global(.button) { padding: 15px 23px; font-size: 15px; gap: 15px; }.actions :global(.text-link) { font-size: 14px; }
+ .petWorld { gap: 18px; }.petTile { min-height: 190px; border-radius: 28px; }.petTile > div { padding: 24px; width: 62%; }.petTile h2 { font-size: 28px; }.tileEyebrow { display: none; }.petTile > img { width: 285px; height: 210px; right: -12px; bottom: -15px; }.catTile > img { right: -20px; }.tileLink { font-size: 12px; gap: 9px; margin-top: 14px; }.principles { padding-top: 60px; }.principles > h2 { font-size: 42px; }.principleGrid { gap: 35px; }.principles h3 { font-size: 20px; }.principles p { font-size: 14px; }
+ .product { gap: 32px; }.productFigure { padding: 25px 10px; border-radius: 32px; }.labelPair { height: 330px; }.labelArt { width: 137px; height: 276px; padding: 19px 12px; }.labelArt > img:first-child { width: 111px; }.labelTitle { font-size: 17px; }.labelSubtitle { font-size: 9px; }.labelArt > img:last-child { width: 135px; height: 175px; }.productCopy h3 { font-size: 32px; }.productCopy > p:not([class]) { font-size: 16px; }.sectionHeading > p { font-size: 15px; }.aboutInner { gap: 40px; padding-bottom: 72px; }.story .storyLead { font-size: 21px; }.production { gap: 40px; }.productionPanel { min-height: 420px; padding-inline: 20px; }.year { font-size: 85px; }.productionSteps { gap: 7px; }.productionSteps span { padding: 6px 9px; font-size: 11px; }.questions { gap: 35px; }.faqList summary { font-size: 17px; }.contactInner { gap: 20px; }.contactArt img { width: 500px; right: -139px; }.contactArt > span { font-size: 14px; left: -5px; top: 47px; padding: 14px 20px; }
+}
+@media(max-width:767px) {
+ .heroInner { grid-template-columns: 1fr; min-height: auto; }.heroCopy { padding: 20px 0 0; }.intro { margin-bottom: 18px; font-size: 12px; }.heroCopy h1 { font-size: clamp(63px,16vw,88px); line-height: .94; }.heroSubtitle { margin-top: 24px; font-size: 21px; line-height: 1.2; }.heroDescription { font-size: 14px; margin-top: 13px; }.actions { margin-top: 22px; gap: 22px; }.actions :global(.button) { font-size: 15px; padding: 15px 24px; gap: 22px; border-radius: 27px; }.heroArt { margin: 20px -20px 0; height: 420px; }.heroPets { width: 420px; max-width: 115%; bottom: 3px; right: 50%; transform: translateX(50%); }.heroWave { height: 64px; bottom: -1px; }.lilacBackdrop { width: 530px; height: 550px; right: -310px; top: 170px; }.artSpark { top: 18px; right: 22px; font-size: 43px; }.sunRays { right: -44px; transform: scale(.8); }
+ .petWorld { gap: 14px; grid-template-columns: 1fr; margin-top: 6px; }.petTile { min-height: 180px; border-radius: 28px; }.petTile > div { padding: 25px; }.petTile h2 { font-size: 32px; }.petTile > img { width: 310px; height: 218px; right: -10px; bottom: -19px; }.catTile > img { right: -15px; }.tileEyebrow { display: block; font-size: 10px; max-width: 135px; }.tileLink { margin-top: 17px; }
+ .principles { padding: 48px 0 10px; }.principles > h2 { font-size: 38px; margin-bottom: 30px; }.principleGrid { grid-template-columns: 1fr; gap: 27px; text-align: left; }.principleGrid > div { display: grid; grid-template-columns: 65px 1fr; gap: 0 20px; align-items: start; }.principleGrid > div+div::before { display: none; }.principleIcon { grid-row: 1/3; width: 65px; height: 60px; font-size: 32px; margin: 0; }.principles h3 { font-size: 21px; margin-top: 2px; margin-bottom: 5px; }.principles p { font-size: 14px; margin: 0; }.principleIcon svg { width: 27px; height: 27px; }
+ .sectionHeading { display: block; margin-bottom: 30px; }.sectionHeading > p { margin-top: 18px; }.sectionHeading > p br { display: none; }.product { grid-template-columns: 1fr; gap: 30px; }.care { padding-top: 58px; }.productFigure { padding: 24px 15px; }.labelPair { height: 333px; }.labelArt { width: 154px; height: 287px; }.labelArt > img:first-child { width: 125px; }.labelTitle { font-size: 20px; }.labelArt > img:last-child { width: 143px; height: 182px; }.productCopy h3 { font-size: 34px; }.productPurpose { margin-top: 20px; }.productCopy > p:not([class]) { margin-top: 16px; }.productDetails summary { font-size: 14px; }.smallNote { font-size: 12px; }
+ .about { margin-top: 35px; }.aboutWave { height: 75px; top: -74px; }.aboutInner { grid-template-columns: 1fr; gap: 32px; padding: 24px 0 56px; }.aboutHeading h2 { max-width: 420px; }.aboutNote { display: none; }.story { padding: 0; }.story .storyLead { font-size: 22px; }.story p { margin-bottom: 18px; }.story .storyConclusion { margin-top: 22px; }
+ .production { grid-template-columns: 1fr; gap: 38px; }.productionCopy > p:not([class]) { margin-top: 21px; }.productionPanel { margin-inline: 9px; min-height: 395px; padding-top: 35px; border-radius: 44% 44% 29% 16%; }.year { font-size: 98px; margin-top: 10px; }.productionPanel > p:first-child { font-size: 16px; }.productionSteps { margin-block: 26px 22px; }.productionSteps span { font-size: 11px; }
+ .questions { grid-template-columns: 1fr; gap: 30px; }.faqIntro { margin-top: 18px; }.faqIntro br { display: none; }.faqList summary { min-height: 77px; font-size: 16px; gap: 12px; }.faqList details p { padding-right: 15px; font-size: 15px; }
+ .contact { margin-top: 40px; }.contactWave { height: 75px; top: -74px; }.contactInner { grid-template-columns: minmax(0,1fr); gap: 0; }.contactCopy { padding: 25px 0 0; }.contactCopy h2 { max-width: 450px; }.contactCopy > p:not([class]) { margin-top: 20px; max-width: 350px; }.contactCopy .telegramNote { max-width: 265px; font-size: 12px; }.contactArt { min-height: 290px; margin-top: 9px; }.contactArt > span { top: 40px; left: 0; padding: 13px 19px; font-size: 15px; }.contactArt img { width: 460px; bottom: -55px; right: -108px; }
+}
+@media(min-width:768px) and (max-width:900px) {
+ .heroPets { width: 410px; right: -20px; bottom: 60px; }
+ .catTile > img { width: 235px; right: -10px; bottom: -50px; }
+ .contactArt img { width: 400px; right: -60px; }
+}
+@media(max-width:767px) { .catTile > img { width: 255px; right: -20px; bottom: -45px; } }
+@media(max-width:374px) { .heroCopy h1 { font-size: 61px; }.heroArt { height: 385px; }.heroPets { width: 385px; }.petTile h2 { font-size: 29px; }.petTile > div { padding-left: 21px; }.tileEyebrow { font-size: 9px; }.labelArt { width: 140px; height: 278px; }.labelArt > img:first-child { width: 115px; }.labelPair { height: 320px; }.actions { gap: 18px; }.actions :global(.button) { padding-inline: 20px; } }
+
+
+

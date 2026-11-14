@@ -1,0 +1,15 @@
+{
+  "name": "pushii-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build && node scripts/postbuild.mjs",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/check-export.mjs"
+  },
+  "dependencies": { "next": "16.4.6", "react": "19.3.1", "react-dom": "19.3.1" },
+  "devDependencies": { "@types/node": "^24.0.0", "@types/react": "^19.0.0", "@types/react-dom": "^19.0.0", "typescript": "7.0.2", "@fontsource-variable/nunito": "^5.2.0" },
+  "engines": { "node": ">=22.0.0" }
+}
