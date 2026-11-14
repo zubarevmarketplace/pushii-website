@@ -18,6 +18,13 @@ if (site.mode === 'preview') {
   assert.match(html, /name="robots" content="noindex, nofollow"/);
   assert.match(await readFile('out/_headers', 'utf8'), /X-Robots-Tag: noindex/);
 }
+if (site.mode === 'production') {
+  assert.ok(site.publicationReady && site.url, 'Production domain confirmed');
+  assert.match(html, /name="robots" content="index, follow"/);
+  assert.ok(html.includes(`href="${site.url}/"`), 'Canonical points to production origin');
+  assert.ok((await readFile('out/sitemap.xml', 'utf8')).includes(`${site.url}/`));
+  assert.ok(!(await readFile('out/robots.txt', 'utf8')).includes('Disallow: /'));
+}
 if (!site.url) { assert.ok(!html.includes('rel="canonical"')); assert.ok(!(await readdir('out')).includes('sitemap.xml')); }
 if (!site.telegramUrl) { assert.ok(!html.includes('href="https://t.me/')); assert.ok(!html.includes('Скоро в Telegram')); }
 for (const removed of ['Антарес', 'antares-production', 'Готовим к запуску', 'Будущая линейка', 'Скоро знакомство', 'Готовим первую линейку']) assert.ok(!html.includes(removed), `Removed launch placeholder or supplier promotion: ${removed}`);

@@ -1,8 +1,8 @@
 {
   "name": "PUSHII",
-  "mode": "preview",
-  "publicationReady": false,
-  "url": null,
+  "mode": "production",
+  "publicationReady": true,
+  "url": "https://mypushii.ru",
   "telegramUrl": null,
   "title": "PUSHII — забота, которую видно",
   "description": "PUSHII — российский бренд зоокосметики. Шампуни для собак и кошек, понятный уход и много любви в простых вещах."
